@@ -7,6 +7,6 @@ rm -rf ${PWD}/.git* || rm -rf ${PWD}/Ricevute/.git*
 git clone https://github.com/mircomannino/Ricevute.git
 
 # Get file from directory and delete it
-rm -r __pychache__
+rm -r __pycache__
 mv ${PWD}/Ricevute/* ./
 rm -rf Ricevute
