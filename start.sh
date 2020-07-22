@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-sudo python3 ./main2.py
+echo "$1" | sudo -S python3 ./main.py

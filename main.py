@@ -1,6 +1,6 @@
 import tkinter as tk
 from ITEMS import *
-from PRINT import *
+# from PRINT import *
 
 # Global configuration
 window = tk.Tk()
@@ -66,7 +66,7 @@ def reset():
     # Deal with unknownn item
     for i in range(n_unknown):
         unknown_name_entry_list[i].config(state="normal")
-        unknown_name_list[i].set("")
+        unknown_name_list[i].set("Altro" + str(i+1))
         unknown_price_list[i].set(0.0)
         unknown_quantity_list[i].set(0)
         unknown_confirm_button_list[i].config(state="normal")
