@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
 
-echo "$1" | sudo -S python3 ./main.py
+$PASSWORD="r"
+echo "${PASSWORD}" | sudo -S python3 ./main.py
