@@ -1,5 +1,11 @@
 #!/usr/bin/env bash
 
-rm -rf .git*
+# Remove the git tracking
+rm -rf ${PWD}/.git*
 
+# Get the repository -> "Ricevute" directory
 git clone https://github.com/mircomannino/Ricevute.git
+
+# Get file from directory and delete it
+mv ${PWD}/Ricevute/* ./
+rm -rf Ricevute

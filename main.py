@@ -1,6 +1,6 @@
 import tkinter as tk
 from ITEMS import *
-# from PRINT import *
+from PRINT import *
 
 # Global configuration
 window = tk.Tk()

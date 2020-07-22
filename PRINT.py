@@ -1,6 +1,16 @@
 # Function to print the result
 from escpos.printer import Usb
-printer = Usb(0x0483,0x5743,0)
+from escpos.printer import Network
+from escpos import exceptions as escposExceptions
+
+# Initialize the printer
+# USB
+try:
+    printer = Usb(0x0483,0x5743,0)
+except escposExceptions.USBNotFoundError:
+    print("Stampante USB non rilevata")
+    exit()
+# NETWORK
 printer.codepage = 'CP858'
 
 
