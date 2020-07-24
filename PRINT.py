@@ -3,7 +3,6 @@ from escpos.printer import Usb
 from escpos.printer import Network
 from escpos import exceptions as escposExceptions
 
-
 # Initialize the printer
 # USB
 try:
@@ -12,9 +11,9 @@ except escposExceptions.USBNotFoundError:
     print("Stampante USB non rilevata")
     # NETWORK
     try:
-        ip_address = '192.168.1.1'
+        ip_address = '192.168.1.100'
         printer = Network(ip_address)
-    except escposExceptions.NetworkError: # To change
+    except OSError: # To change
         print("Stampante di rete non rilevata")
         exit()
 
