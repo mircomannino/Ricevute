@@ -3,14 +3,21 @@ from escpos.printer import Usb
 from escpos.printer import Network
 from escpos import exceptions as escposExceptions
 
+
 # Initialize the printer
 # USB
 try:
     printer = Usb(0x0483,0x5743,0)
 except escposExceptions.USBNotFoundError:
     print("Stampante USB non rilevata")
-    exit()
-# NETWORK
+    # NETWORK
+    try:
+        ip_address = '192.168.1.1'
+        printer = Network(ip_address)
+    except escposExceptions.NetworkError: # To change
+        print("Stampante di rete non rilevata")
+        exit()
+
 printer.codepage = 'CP858'
 
 
